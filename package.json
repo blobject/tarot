@@ -10,7 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "db": "typeorm-ts-node-commonjs",
-    "db:init": "ts-node app/db/index.ts"
+    "db:init": "node -r ts-node/register --env-file=.env.development app/db/index.ts"
   },
   "dependencies": {
     "next": "14.1.4",
