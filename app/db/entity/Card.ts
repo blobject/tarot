@@ -1,26 +1,38 @@
 import "reflect-metadata"
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm"
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from "typeorm"
+import Arcanum from "./Arcanum"
+import Suit from "./Suit"
 
 @Entity()
-export class Card {
+class Card {
   @PrimaryGeneratedColumn("uuid")
   id!: string
 
-  @Column({ type: "text", nullable: false })
-  arcanum!: string
+  @ManyToOne((type) => Arcanum)
+  @JoinColumn()
+  arcanum!: Arcanum
 
-  @Column({ type: "text", nullable: false })
+  @Column({type: "text", nullable: false})
   handle!: string
 
-  @Column({ type: "int", nullable: false })
+  @Column({type: "int", nullable: false})
   index!: number
 
-  @Column({ type: "text", nullable: false })
+  @Column({type: "text", nullable: false})
   name!: string
 
-  @Column({ type: "int", nullable: false })
+  @Column({type: "int", nullable: false})
   num!: number
 
-  @Column({ type: "text", nullable: false })
-  suit!: string
+  @ManyToOne((type) => Suit)
+  @JoinColumn()
+  suit!: Suit
 }
+
+export default Card
