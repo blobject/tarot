@@ -1,0 +1,33 @@
+{
+  "name": "tarot",
+  "version": "0.1.0",
+  "description": "tarot",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db": "typeorm-ts-node-commonjs",
+    "db:init": "ts-node app/db/index.ts"
+  },
+  "dependencies": {
+    "next": "14.1.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "reflect-metadata": "^0.2.2",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}
