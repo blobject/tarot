@@ -1,17 +1,17 @@
+import {numerals, pips} from "../lib/names"
 import {MajorNum, PipNum} from "../type/num"
-import {numerals, pips} from "../db/names"
 import {capitalise} from "./string"
 
-export const getNumeral = (
+export function getNumeral(
   num: MajorNum
-): string => {
+): string {
   const numeral = numerals[num]
   return numeral.toUpperCase()
 }
 
-export const getPip = (
+export function getPip(
   num: PipNum
-): string => {
+): string {
   const nyms = pips[num]
   const pip = nyms[0]
   return capitalise(pip)

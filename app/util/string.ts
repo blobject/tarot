@@ -1,11 +1,12 @@
-export const capitalise = (
+export function capitalise(
   s: string
-): string =>
-  `${s.charAt(0).toUpperCase()}${s.slice(1)}`
+): string {
+  return `${s.charAt(0).toUpperCase()}${s.slice(1)}`
+}
 
-export const pluralise = (
+export function pluralise(
   s: string
-): string => {
+): string {
   if ("f" === s.slice(-1)) {
     return s.replace(/f+$/, "ves")
   }

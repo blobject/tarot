@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "description": "tarot",
   "private": true,
-  "type": "commonjs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "db": "typeorm-ts-node-commonjs",
-    "db:init": "node -r ts-node/register --env-file=.env.development app/db/index.ts"
+    "db:seed": "node -r ts-node/register --env-file=.env.development scripts/seed.ts"
   },
   "dependencies": {
     "next": "14.1.4",
