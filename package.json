@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "db": "typeorm-ts-node-commonjs",
-    "db:seed": "node -r ts-node/register --env-file=.env.development scripts/seed.ts"
+    "db:seed": "node -r ts-node/register --env-file=.env.development script/seed.ts"
   },
   "dependencies": {
     "next": "14.1.4",

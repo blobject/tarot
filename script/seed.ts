@@ -4,7 +4,7 @@ import {
   arcana as arcanumNames,
   majors as majorNames,
   suits as suitNames,
-} from "../app/lib/names"
+} from "../app/lib/name"
 import {PipNum} from "../app/type/num"
 import {getPip} from "../app/util/num"
 import {capitalise, pluralise} from "../app/util/string"

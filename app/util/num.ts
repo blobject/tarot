@@ -1,4 +1,4 @@
-import {numerals, pips} from "../lib/names"
+import {numerals, pips} from "../lib/name"
 import {MajorNum, PipNum} from "../type/num"
 import {capitalise} from "./string"
 
