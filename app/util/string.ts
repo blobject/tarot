@@ -7,10 +7,14 @@ export function capitalise(
 export function pluralise(
   s: string
 ): string {
-  if ("f" === s.slice(-1)) {
+  const last = s.slice(-1)
+  if ("f" === last) {
     return s.replace(/f+$/, "ves")
   }
-  if (["ss", "zz"].includes(s.slice(-2))) {
+  if ("y" === last) {
+    return s.replace(/y+$/, "ies")
+  }
+  if (["x", "s", "z"].includes(last)) {
     return `${s}es`
   }
   return `${s}s`
